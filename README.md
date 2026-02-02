@@ -2,6 +2,12 @@
 
 A full-stack MERN application where users can browse, subscribe to free and paid courses with a special Black Friday promo code discount.
 
+| 📖 Table of Contents | | | |
+|---|---|---|---|
+| [🚀 Live URLs](#-live-urls) | [🛠️ Tech Stack](#️-tech-stack) | [✨ Features](#-features) | [🔑 Credentials](#-demo-credentials) |
+| [🎟️ Promo Code](#️-promo-code) | [📡 API Routes](#-api-routes) | [🏃 Setup](#-local-setup-instructions) | [📁 Project Structure](#-project-structure) |
+| [🖼️ Screenshots](#️-screenshots) | [📝 Env Vars](#-environment-variables) | [🚢 Deployment](#-deployment) | [👨‍💻 Author](#-author) |
+
 ## 🚀 Live URLs
 
 | Service | URL |
