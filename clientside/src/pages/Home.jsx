@@ -26,28 +26,28 @@ function Home() {
     if (loading) return <Loading />;
 
     return (
-        <div className="animate-fade-in">
+        <div className="animate-fade-in pt-20">
             {/* Hero Section */}
             <div className="text-center mb-12">
                 <div className="inline-block mb-4">
-                    <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full">
+                    <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full">
                         🔥 BLACK FRIDAY SALE - 50% OFF ALL PAID COURSES
                     </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     <span className="gradient-text">Learn & Grow</span>
                     <br />
-                    <span className="text-white">With Our Courses</span>
+                    <span className="text-gray-800">With Our Courses</span>
                 </h1>
-                <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                <p className="text-gray-500 text-lg max-w-2xl mx-auto">
                     Unlock your potential with our curated collection of courses.
-                    Use promo code <strong className="text-yellow-400">BFSALE25</strong> for 50% off on paid courses!
+                    Use promo code <strong className="text-amber-600">BFSALE25</strong> for 50% off on paid courses!
                 </p>
             </div>
 
             {/* Error State */}
             {error && (
-                <div className="bg-red-500/10 border border-red-500/30 text-red-400 px-6 py-4 rounded-xl mb-8 text-center">
+                <div className="bg-red-50 border border-red-200 text-red-600 px-6 py-4 rounded-xl mb-8 text-center">
                     {error}
                 </div>
             )}
@@ -56,8 +56,8 @@ function Home() {
             {courses.length > 0 ? (
                 <>
                     <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-2xl font-bold text-white">Available Courses</h2>
-                        <span className="text-gray-400 text-sm">{courses.length} courses</span>
+                        <h2 className="text-2xl font-bold text-gray-800">Available Courses</h2>
+                        <span className="text-gray-500 text-sm">{courses.length} courses</span>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {courses.map((course) => (
@@ -68,8 +68,8 @@ function Home() {
             ) : (
                 <div className="text-center py-16">
                     <div className="text-6xl mb-4">📚</div>
-                    <h3 className="text-xl font-semibold text-white mb-2">No courses available</h3>
-                    <p className="text-gray-400">Check back later for new courses!</p>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">No courses available</h3>
+                    <p className="text-gray-500">Check back later for new courses!</p>
                 </div>
             )}
         </div>

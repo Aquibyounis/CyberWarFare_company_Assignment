@@ -38,21 +38,21 @@ function Signup() {
     };
 
     return (
-        <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4">
+        <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 pt-20">
             <div className="w-full max-w-md">
                 {/* Header */}
                 <div className="text-center mb-8">
                     <h1 className="text-3xl font-bold gradient-text mb-2">Create Account</h1>
-                    <p className="text-gray-400">Join us and start learning today</p>
+                    <p className="text-gray-500">Join us and start learning today</p>
                 </div>
 
                 {/* Black Friday Banner */}
-                <div className="card p-4 mb-6 border-purple-500/30 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+                <div className="card p-4 mb-6 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50">
                     <div className="flex items-center gap-3">
                         <span className="text-2xl">🎉</span>
                         <div>
-                            <p className="text-white font-medium">Black Friday Special!</p>
-                            <p className="text-gray-400 text-sm">Use code <strong className="text-yellow-400">BFSALE25</strong> for 50% off</p>
+                            <p className="text-gray-800 font-medium">Black Friday Special!</p>
+                            <p className="text-gray-500 text-sm">Use code <strong className="text-amber-600">BFSALE25</strong> for 50% off</p>
                         </div>
                     </div>
                 </div>
@@ -60,14 +60,14 @@ function Signup() {
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="card p-8 animate-slide-up">
                     {error && (
-                        <div className="bg-red-500/10 border border-red-500/30 text-red-400 px-4 py-3 rounded-xl mb-6 text-sm">
+                        <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl mb-6 text-sm">
                             {error}
                         </div>
                     )}
 
                     <div className="space-y-5">
                         <div>
-                            <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">
+                            <label htmlFor="name" className="block text-gray-700 text-sm font-medium mb-2">
                                 Full Name (Optional)
                             </label>
                             <input
@@ -82,7 +82,7 @@ function Signup() {
                         </div>
 
                         <div>
-                            <label htmlFor="email" className="block text-gray-300 text-sm font-medium mb-2">
+                            <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-2">
                                 Email Address
                             </label>
                             <input
@@ -98,7 +98,7 @@ function Signup() {
                         </div>
 
                         <div>
-                            <label htmlFor="password" className="block text-gray-300 text-sm font-medium mb-2">
+                            <label htmlFor="password" className="block text-gray-700 text-sm font-medium mb-2">
                                 Password
                             </label>
                             <input
@@ -129,9 +129,9 @@ function Signup() {
                         </button>
                     </div>
 
-                    <p className="text-center text-gray-400 mt-6 text-sm">
+                    <p className="text-center text-gray-500 mt-6 text-sm">
                         Already have an account?{' '}
-                        <Link to="/login" className="text-purple-400 hover:text-purple-300 font-medium">
+                        <Link to="/login" className="text-purple-600 hover:text-purple-700 font-medium">
                             Sign in
                         </Link>
                     </p>

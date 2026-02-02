@@ -32,32 +32,32 @@ function Login() {
     };
 
     return (
-        <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4">
+        <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 pt-20">
             <div className="w-full max-w-md">
                 {/* Header */}
                 <div className="text-center mb-8">
                     <h1 className="text-3xl font-bold gradient-text mb-2">Welcome Back</h1>
-                    <p className="text-gray-400">Sign in to access your courses</p>
+                    <p className="text-gray-500">Sign in to access your courses</p>
                 </div>
 
                 {/* Demo Credentials */}
-                <div className="card p-4 mb-6 border-yellow-500/30 bg-yellow-500/5">
-                    <p className="text-yellow-400 text-sm font-medium mb-2">🔑 Demo Credentials:</p>
-                    <p className="text-gray-300 text-sm">Email: <code className="bg-gray-700 px-2 py-0.5 rounded">user1@test.com</code></p>
-                    <p className="text-gray-300 text-sm">Password: <code className="bg-gray-700 px-2 py-0.5 rounded">Test@123</code></p>
+                <div className="card p-4 mb-6 border-amber-200 bg-amber-50">
+                    <p className="text-amber-700 text-sm font-medium mb-2">🔑 Demo Credentials:</p>
+                    <p className="text-gray-600 text-sm">Email: <code className="bg-gray-100 px-2 py-0.5 rounded text-gray-800">user1@test.com</code></p>
+                    <p className="text-gray-600 text-sm">Password: <code className="bg-gray-100 px-2 py-0.5 rounded text-gray-800">Test@123</code></p>
                 </div>
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="card p-8 animate-slide-up">
                     {error && (
-                        <div className="bg-red-500/10 border border-red-500/30 text-red-400 px-4 py-3 rounded-xl mb-6 text-sm">
+                        <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl mb-6 text-sm">
                             {error}
                         </div>
                     )}
 
                     <div className="space-y-5">
                         <div>
-                            <label htmlFor="email" className="block text-gray-300 text-sm font-medium mb-2">
+                            <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-2">
                                 Email Address
                             </label>
                             <input
@@ -73,7 +73,7 @@ function Login() {
                         </div>
 
                         <div>
-                            <label htmlFor="password" className="block text-gray-300 text-sm font-medium mb-2">
+                            <label htmlFor="password" className="block text-gray-700 text-sm font-medium mb-2">
                                 Password
                             </label>
                             <input
@@ -104,9 +104,9 @@ function Login() {
                         </button>
                     </div>
 
-                    <p className="text-center text-gray-400 mt-6 text-sm">
+                    <p className="text-center text-gray-500 mt-6 text-sm">
                         Don't have an account?{' '}
-                        <Link to="/signup" className="text-purple-400 hover:text-purple-300 font-medium">
+                        <Link to="/signup" className="text-purple-600 hover:text-purple-700 font-medium">
                             Sign up
                         </Link>
                     </p>

@@ -12,7 +12,6 @@ function CourseDetail() {
     const [subscribing, setSubscribing] = useState(false);
     const [subscribeSuccess, setSubscribeSuccess] = useState(false);
 
-    // Promo code state
     const [promoCode, setPromoCode] = useState('');
     const [promoApplied, setPromoApplied] = useState(false);
     const [promoError, setPromoError] = useState('');
@@ -76,9 +75,9 @@ function CourseDetail() {
 
     if (!course) {
         return (
-            <div className="text-center py-16">
+            <div className="text-center py-16 pt-24">
                 <div className="text-6xl mb-4">😕</div>
-                <h3 className="text-xl font-semibold text-white mb-2">Course not found</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Course not found</h3>
                 <button onClick={() => navigate('/')} className="btn-primary mt-4">
                     Back to Courses
                 </button>
@@ -88,17 +87,16 @@ function CourseDetail() {
 
     const isFree = course.price === 0;
 
-    // Success state
     if (subscribeSuccess) {
         return (
-            <div className="max-w-2xl mx-auto text-center py-16 animate-fade-in">
+            <div className="max-w-2xl mx-auto text-center py-16 pt-24 animate-fade-in">
                 <div className="card p-12">
-                    <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-4xl">✓</span>
+                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span className="text-4xl text-green-600">✓</span>
                     </div>
-                    <h2 className="text-2xl font-bold text-white mb-2">Successfully Subscribed!</h2>
-                    <p className="text-gray-400 mb-6">
-                        You now have access to <strong className="text-white">{course.title}</strong>
+                    <h2 className="text-2xl font-bold text-gray-800 mb-2">Successfully Subscribed!</h2>
+                    <p className="text-gray-500 mb-6">
+                        You now have access to <strong className="text-gray-800">{course.title}</strong>
                     </p>
                     <div className="flex gap-4 justify-center">
                         <button onClick={() => navigate('/my-courses')} className="btn-primary">
@@ -114,17 +112,15 @@ function CourseDetail() {
     }
 
     return (
-        <div className="max-w-4xl mx-auto animate-fade-in">
-            {/* Back Button */}
+        <div className="max-w-4xl mx-auto animate-fade-in pt-24">
             <button
                 onClick={() => navigate('/')}
-                className="text-gray-400 hover:text-white mb-6 flex items-center gap-2 transition-colors"
+                className="text-gray-500 hover:text-gray-800 mb-6 flex items-center gap-2 transition-colors"
             >
                 ← Back to Courses
             </button>
 
             <div className="grid md:grid-cols-2 gap-8">
-                {/* Course Image */}
                 <div className="card overflow-hidden">
                     <img
                         src={course.image || 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600'}
@@ -133,9 +129,7 @@ function CourseDetail() {
                     />
                 </div>
 
-                {/* Course Details */}
                 <div className="space-y-6">
-                    {/* Title & Price */}
                     <div>
                         <div className="flex items-center gap-3 mb-3">
                             {isFree ? (
@@ -147,35 +141,32 @@ function CourseDetail() {
                                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-bold px-3 py-1 rounded-full">
                                         ${course.price}
                                     </span>
-                                    <span className="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-full">
+                                    <span className="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                                         50% OFF with promo
                                     </span>
                                 </>
                             )}
                         </div>
-                        <h1 className="text-3xl font-bold text-white">{course.title}</h1>
+                        <h1 className="text-3xl font-bold text-gray-800">{course.title}</h1>
                     </div>
 
-                    {/* Description */}
                     <div className="card p-6">
-                        <h3 className="text-lg font-semibold text-white mb-3">About this course</h3>
-                        <p className="text-gray-400 leading-relaxed">{course.description}</p>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-3">About this course</h3>
+                        <p className="text-gray-600 leading-relaxed">{course.description}</p>
                     </div>
 
-                    {/* Subscription Section */}
                     <div className="card p-6">
                         {error && (
-                            <div className="bg-red-500/10 border border-red-500/30 text-red-400 px-4 py-3 rounded-xl mb-4 text-sm">
+                            <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl mb-4 text-sm">
                                 {error}
                             </div>
                         )}
 
-                        {/* FREE Course */}
                         {isFree ? (
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between">
-                                    <span className="text-gray-400">Price:</span>
-                                    <span className="text-2xl font-bold text-green-400">FREE</span>
+                                    <span className="text-gray-600">Price:</span>
+                                    <span className="text-2xl font-bold text-green-600">FREE</span>
                                 </div>
                                 <button
                                     onClick={handleSubscribe}
@@ -186,11 +177,9 @@ function CourseDetail() {
                                 </button>
                             </div>
                         ) : (
-                            /* PAID Course */
                             <div className="space-y-4">
-                                {/* Promo Code Input */}
                                 <div>
-                                    <label className="block text-gray-300 text-sm font-medium mb-2">
+                                    <label className="block text-gray-700 text-sm font-medium mb-2">
                                         Promo Code (Required for paid courses)
                                     </label>
                                     <div className="flex gap-2">
@@ -215,41 +204,38 @@ function CourseDetail() {
                                         </button>
                                     </div>
                                     {promoError && (
-                                        <p className="text-red-400 text-sm mt-2">{promoError}</p>
+                                        <p className="text-red-500 text-sm mt-2">{promoError}</p>
                                     )}
                                     {promoApplied && (
-                                        <p className="text-green-400 text-sm mt-2">✓ Promo code applied! 50% discount</p>
+                                        <p className="text-green-600 text-sm mt-2">✓ Promo code applied! 50% discount</p>
                                     )}
                                 </div>
 
-                                {/* Hint */}
-                                <div className="bg-yellow-500/10 border border-yellow-500/30 px-4 py-3 rounded-xl">
-                                    <p className="text-yellow-400 text-sm">
+                                <div className="bg-amber-50 border border-amber-200 px-4 py-3 rounded-xl">
+                                    <p className="text-amber-700 text-sm">
                                         💡 Hint: Use code <strong>BFSALE25</strong> for 50% off!
                                     </p>
                                 </div>
 
-                                {/* Price Summary */}
-                                <div className="space-y-2 pt-4 border-t border-gray-700">
-                                    <div className="flex items-center justify-between text-gray-400">
+                                <div className="space-y-2 pt-4 border-t border-gray-200">
+                                    <div className="flex items-center justify-between text-gray-600">
                                         <span>Original Price:</span>
                                         <span className={promoApplied ? 'line-through' : ''}>${course.price}</span>
                                     </div>
                                     {promoApplied && (
                                         <>
-                                            <div className="flex items-center justify-between text-green-400">
+                                            <div className="flex items-center justify-between text-green-600">
                                                 <span>Discount (50%):</span>
                                                 <span>-${(course.price * 0.5).toFixed(2)}</span>
                                             </div>
-                                            <div className="flex items-center justify-between text-white text-xl font-bold pt-2 border-t border-gray-700">
+                                            <div className="flex items-center justify-between text-gray-800 text-xl font-bold pt-2 border-t border-gray-200">
                                                 <span>Final Price:</span>
-                                                <span className="text-pink-400">${discountedPrice?.toFixed(2)}</span>
+                                                <span className="text-pink-600">${discountedPrice?.toFixed(2)}</span>
                                             </div>
                                         </>
                                     )}
                                 </div>
 
-                                {/* Subscribe Button */}
                                 <button
                                     onClick={handleSubscribe}
                                     disabled={subscribing || !promoApplied}

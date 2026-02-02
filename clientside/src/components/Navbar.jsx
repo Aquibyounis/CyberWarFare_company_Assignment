@@ -12,7 +12,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="bg-gray-900/80 backdrop-blur-xl border-b border-gray-700/50 sticky top-0 z-50">
+        <nav className="fixed top-[10px] left-1/2 -translate-x-1/2 w-[80svw] bg-white/90 backdrop-blur-xl border border-gray-200 rounded-[25px] z-50 shadow-lg">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
@@ -23,36 +23,29 @@ function Navbar() {
                         <span className="text-xl font-bold gradient-text">CourseHub</span>
                     </Link>
 
-                    {/* Black Friday Badge */}
-                    <div className="hidden md:flex items-center">
-                        <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                            🔥 BLACK FRIDAY SALE
-                        </span>
-                    </div>
-
                     {/* Navigation */}
                     <div className="flex items-center space-x-4">
                         {authenticated ? (
                             <>
                                 <Link
                                     to="/"
-                                    className="text-gray-300 hover:text-white transition-colors px-3 py-2"
+                                    className="text-gray-600 hover:text-gray-900 transition-colors px-3 py-2"
                                 >
                                     Courses
                                 </Link>
                                 <Link
                                     to="/my-courses"
-                                    className="text-gray-300 hover:text-white transition-colors px-3 py-2"
+                                    className="text-gray-600 hover:text-gray-900 transition-colors px-3 py-2"
                                 >
                                     My Courses
                                 </Link>
-                                <div className="flex items-center space-x-3 ml-4 pl-4 border-l border-gray-700">
-                                    <span className="text-gray-400 text-sm">
+                                <div className="flex items-center space-x-3 ml-4 pl-4 border-l border-gray-300">
+                                    <span className="text-gray-500 text-sm">
                                         {user?.name || user?.email}
                                     </span>
                                     <button
                                         onClick={handleLogout}
-                                        className="bg-red-600/20 text-red-400 hover:bg-red-600/30 px-4 py-2 rounded-lg transition-colors text-sm"
+                                        className="bg-red-50 text-red-600 hover:bg-red-100 px-4 py-2 rounded-lg transition-colors text-sm"
                                     >
                                         Logout
                                     </button>
@@ -62,7 +55,7 @@ function Navbar() {
                             <>
                                 <Link
                                     to="/login"
-                                    className="text-gray-300 hover:text-white transition-colors px-4 py-2"
+                                    className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2"
                                 >
                                     Login
                                 </Link>
