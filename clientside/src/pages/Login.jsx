@@ -40,13 +40,6 @@ function Login() {
                     <p className="text-gray-500">Sign in to access your courses</p>
                 </div>
 
-                {/* Demo Credentials */}
-                <div className="card p-4 mb-6 border-amber-200 bg-amber-50">
-                    <p className="text-amber-700 text-sm font-medium mb-2">🔑 Demo Credentials:</p>
-                    <p className="text-gray-600 text-sm">Email: <code className="bg-gray-100 px-2 py-0.5 rounded text-gray-800">user1@test.com</code></p>
-                    <p className="text-gray-600 text-sm">Password: <code className="bg-gray-100 px-2 py-0.5 rounded text-gray-800">Test@123</code></p>
-                </div>
-
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="card p-8 animate-slide-up">
                     {error && (
