@@ -29,10 +29,10 @@ function Home() {
         <div className="animate-fade-in pt-20">
             {/* Hero Section */}
             <div className="text-center mb-12">
-                <div className="inline-block mb-4">
-                    <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full">
+                <div className="flex justify-center mb-4 px-4">
+                    <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl md:rounded-full shadow-md text-center">
                         🔥 BLACK FRIDAY SALE - 50% OFF ALL PAID COURSES
-                    </span>
+                    </div>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     <span className="gradient-text">Learn & Grow</span>
