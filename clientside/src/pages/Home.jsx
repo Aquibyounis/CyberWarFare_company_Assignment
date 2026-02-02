@@ -41,7 +41,6 @@ function Home() {
                 </h1>
                 <p className="text-gray-500 text-lg max-w-2xl mx-auto">
                     Unlock your potential with our curated collection of courses.
-                    Use promo code <strong className="text-amber-600">BFSALE25</strong> for 50% off on paid courses!
                 </p>
             </div>
 
